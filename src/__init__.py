@@ -1,0 +1,1 @@
+from .pywaifu2x import pywaifu2x
