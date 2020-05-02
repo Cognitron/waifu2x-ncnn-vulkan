@@ -62,7 +62,7 @@ macro(compile_shader SHADER_SRC)
     list(APPEND SHADER_SPV_HEX_FILES ${SHADER_int8s_SPV_HEX_FILE})
 endmacro()
 
-include_directories(${CMAKE_CURRENT_BINARY_DIR} ${Python_INCLUDE_DIRS} /mnt/ssd1t/Anime/ncnn/build/install/include/ncnn)
+include_directories(${CMAKE_CURRENT_BINARY_DIR} ${Python_INCLUDE_DIRS} /usr/include/ncnn)
 #include_directories(${Boost_INCLUDE_DIRS})
 #include_directories()
 message(STATUS ${Vulkan_LIBRARY} ${OpenMP_CXX_LIBRARIES})
@@ -72,7 +72,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS} -fPIC")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
 
 # change these path to yours
-#set(ncnn_DIR "/opt/ncnn/build/install/lib/cmake/ncnn")
+set(ncnn_DIR "/usr/lib")
 find_package(ncnn REQUIRED)
 
 # look for vulkan compute shader and compile
