@@ -72,7 +72,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS} -fPIC")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
 
 # change these path to yours
-set(ncnn_DIR "/mnt/ssd1t/Anime/ncnn/build/install/lib/cmake/ncnn")
+#set(ncnn_DIR "/opt/ncnn/build/install/lib/cmake/ncnn")
 find_package(ncnn REQUIRED)
 
 # look for vulkan compute shader and compile
